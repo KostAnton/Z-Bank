@@ -51,6 +51,26 @@ Made for the Computer Science course in Ort Bialik School, Kiryat Bialik.
     - The levels will go 1 through 10 and will reset each month based on savings progress.
 ---
 
+
+## User Class Code
+```java
+class User{
+    private String name;
+    private String password;
+    private UUID id;
+    private User[] friends;
+    private Levels level;
+
+    public String getName(){
+        return this.name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    ...
+}
+```
+
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1000" alt="Login Screen" src="/assets//loginScreen.png">  Login Screen |  <img width="1000" alt="Account Screen" src="/assets//AccountPageScreen.png"> Account Screen|<img width="1000" alt="Transaction Screen" src="/assets//BankTransactionScreen.png"> Bank Transaction |
