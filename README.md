@@ -50,10 +50,10 @@ Made for the Computer Science course in Ort Bialik School, Kiryat Bialik.
     - The ```Levels``` enum will contain the key and value pairs for each level in the zLevel system.
     - The levels will go 1 through 10 and will reset each month based on savings progress.
 ---
-![](/assets//loginScreen.png "Login")
-![](/assets//AccountPageScreen.png "Account Page")
-![](/assets//BankTransactionScreen.png "Transaction")
-![](/assets//loginScreen.png "Friends")
-![](/assets//SettingsScreen.png "Settings")
+
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="Login Screen" src="/assets//loginScreen.png">  Login Screen |  <img width="1604" alt="Account Screen" src="/assets//AccountPageScreen.png"> Account Screen|<img width="1604" alt="Transaction Screen" src="/assets//BankTransactionScreen">|
+|<img width="1604" alt="Friends Screen" src="/assets//FriendsScreen.png"> Friends Screen |  <img width="1604" alt="Settings Screen" src="/assets//SettingsScreen.png"> Settings Screen |
 ---
 ![](/assets//PosterImageZ-Bank.png "Poster Image")
