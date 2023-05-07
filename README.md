@@ -1,4 +1,4 @@
-# Z-Bank <img src="/assets/logo.png" alt="Z-Bank Logo" style="height: 100px; width:100px;"/>
+# Z-Bank <img src="/assets/logo.png" alt="Z-Bank Logo" style="height: 189px; width:126;"/>
 
 Bank project by Anton Kost.  
 Made for the Computer Science course in Ort Bialik School, Kiryat Bialik.  
