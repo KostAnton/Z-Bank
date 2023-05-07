@@ -53,7 +53,7 @@ Made for the Computer Science course in Ort Bialik School, Kiryat Bialik.
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="Login Screen" src="/assets//loginScreen.png">  Login Screen |  <img width="1604" alt="Account Screen" src="/assets//AccountPageScreen.png"> Account Screen|<img width="1604" alt="Transaction Screen" src="/assets//BankTransactionScreen.png">|
-|<img width="1604" alt="Friends Screen" src="/assets//FriendsScreen.png"> Friends Screen |  <img width="1604" alt="Settings Screen" src="/assets//SettingsScreen.png"> Settings Screen |
+|<img width="1000" alt="Login Screen" src="/assets//loginScreen.png">  Login Screen |  <img width="1000" alt="Account Screen" src="/assets//AccountPageScreen.png"> Account Screen|<img width="1000" alt="Transaction Screen" src="/assets//BankTransactionScreen.png">|
+|<img width="1000" alt="Friends Screen" src="/assets//FriendsScreen.png"> Friends Screen |  <img width="1000" alt="Settings Screen" src="/assets//SettingsScreen.png"> Settings Screen | <img width="1000" alt="Friends Screen" src="/assets//FriendsScreen.png"> Friends Screen |  <img width="1000" alt="Logo" src="/assets//logo.png"> Z-Bank|
 ---
 ![](/assets//PosterImageZ-Bank.png "Poster Image")
