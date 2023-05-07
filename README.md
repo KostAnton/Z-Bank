@@ -1,4 +1,4 @@
-# Z-Bank <img src="/assets/logo.png" alt="Z-Bank Logo" style="height: 189px; width:126;"/>
+# 🏦 Z-Bank <img src="/assets/logo.png" alt="Z-Bank Logo" style="height: 189px; width:126;"/>
 
 Bank project by Anton Kost.  
 Made for the Computer Science course in Ort Bialik School, Kiryat Bialik.  
@@ -18,3 +18,5 @@ Made for the Computer Science course in Ort Bialik School, Kiryat Bialik.
 - ***Bank Transuction Screen***
     - In this screen you can make a transaction to a specific person which is specified by the bank account number.
 - ***
+--- 
+![](/assets//PosterImageZ-Bank.png "Poster Image")
