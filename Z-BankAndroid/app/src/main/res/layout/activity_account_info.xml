@@ -27,40 +27,17 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/nameDisplay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/ibm_plex_mono"
                 android:gravity="center"
-                android:text="Anton Kost"
-                android:textColor="#344754" />
+                android:letterSpacing="1.2"
+                android:text="Anton \n Kost"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="Balance: 350$"
-                android:textColor="#BF344754" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="Savings: 200$"
-                android:textColor="#80344754" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="Making progress (Level 5)"
-                android:textColor="#40344754" />
         </LinearLayout>
 
         <ImageView
@@ -71,18 +48,68 @@
             app:srcCompat="@drawable/logo" />
     </LinearLayout>
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:padding="25dp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/weatherDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ibm_plex_mono"
+            android:gravity="center"
+            android:text="Sunny With Some Clouds &#9729;" />
+
+        <TextView
+            android:id="@+id/balanceDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ibm_plex_mono"
+            android:gravity="center"
+            android:text="Balance: 3521$"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/lastTransactionDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ibm_plex_mono"
+            android:gravity="center"
+            android:text="Last Transaction: \n 1000$ To Viki" />
+
+        <TextView
+            android:id="@+id/savingsDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ibm_plex_mono"
+            android:gravity="center"
+            android:text="Savings Balance: \n 1500$"
+            android:textStyle="italic" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
+        android:id="@+id/transactionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.8dp"
         android:backgroundTint="#344754"
-        android:gravity="center"
-        android:text="Generate Report"
-        android:textSize="12sp" />
+        android:fontFamily="@font/ibm_plex_mono"
+        android:text="A Friendly Transaction"
+        android:textColor="#999696" />
+
+    <Button
+        android:id="@+id/settingsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.8dp"
+        android:backgroundTint="#344754"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:text="settings"
+        android:textColor="#999696" />
+
 </LinearLayout>

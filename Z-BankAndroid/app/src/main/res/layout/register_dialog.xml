@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_theme_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:gravity="center"
+        android:text="Register"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/registerUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="UserName"
+        android:inputType="textPersonName"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/registerPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/registerBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:alpha="0.7"
+        android:backgroundTint="#344754"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:letterSpacing="1.75"
+        android:text="register"
+        android:textColor="#999696"
+        android:textSize="6sp" />
+</LinearLayout>

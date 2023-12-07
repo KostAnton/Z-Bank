@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/toDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:gravity="center"
+        android:text="Transaction to " />
+
+    <EditText
+        android:id="@+id/amountEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:ems="10"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:gravity="center"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.8dp"
+        android:backgroundTint="#344754"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:text="send"
+        android:textColor="#999696" />
+</LinearLayout>

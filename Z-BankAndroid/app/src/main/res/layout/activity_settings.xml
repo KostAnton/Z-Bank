@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/grad_theme_bg"
@@ -27,48 +28,56 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/nameDisplay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/ibm_plex_mono"
                 android:gravity="center"
                 android:text="Anton Kost"
-                android:textColor="#344754" />
+                android:textColor="#344754"
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/ibm_plex_mono"
                 android:gravity="center"
                 android:text="Balance: 350$"
-                android:textColor="#BF344754" />
+                android:textColor="#BF344754"
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/ibm_plex_mono"
                 android:gravity="center"
                 android:text="Savings: 200$"
-                android:textColor="#80344754" />
+                android:textColor="#80344754"
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/ibm_plex_mono"
                 android:gravity="center"
                 android:text="Making progress (Level 5)"
-                android:textColor="#40344754" />
+                android:textColor="#40344754"
+                android:textSize="10sp" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView3"
-            app:srcCompat="@drawable/logo"
             android:layout_width="100dp"
             android:layout_height="125dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/logo" />
     </LinearLayout>
 
     <LinearLayout
@@ -81,6 +90,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/ibm_plex_mono"
             android:gravity="center"
             android:text="User Name" />
 
@@ -90,8 +100,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:fontFamily="@font/ibm_plex_mono"
             android:inputType="textPersonName"
-            android:text="Anton Kost" />
+            android:text="Anton Kost"
+            android:textSize="12sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -104,6 +116,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/ibm_plex_mono"
             android:gravity="center"
             android:text="Password" />
 
@@ -113,8 +126,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:fontFamily="@font/ibm_plex_mono"
             android:inputType="textPersonName"
-            android:text="******" />
+            android:text="******"
+            android:textSize="12sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -127,6 +142,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/ibm_plex_mono"
             android:gravity="center"
             android:text="E-Mail" />
 
@@ -136,8 +152,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:fontFamily="@font/ibm_plex_mono"
             android:inputType="textPersonName"
-            android:text="antonaleksandrkust@gmail.com" />
+            android:text="antonaleksandrkust@gmail.com"
+            android:textSize="12sp" />
     </LinearLayout>
 
     <Switch
@@ -145,5 +163,17 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Notifictaions" />
+        android:fontFamily="@font/ibm_plex_mono"
+        android:text="Notifictaions"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.8dp"
+        android:backgroundTint="#344754"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:text="update"
+        android:textColor="#999696" />
 </LinearLayout>

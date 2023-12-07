@@ -26,27 +26,46 @@
         android:padding="20dp">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/userField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:singleLine="false" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/passField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:hint="Name"
+            android:inputType="textPassword"
+            android:singleLine="false"
+            tools:text="d" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginBtn"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:backgroundTint="#344754"
-        android:text="Login" />
+        android:fontFamily="@font/ibm_plex_mono"
+        android:letterSpacing="1.9"
+        android:text="Log In"
+        android:textColor="#999696" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:alpha="0.7"
+        android:backgroundTint="#344754"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:letterSpacing="1.75"
+        android:text="register"
+        android:textColor="#999696"
+        android:textSize="6sp" />
 
 </LinearLayout>

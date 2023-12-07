@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "485347036669",
+    "firebase_url": "https://androidproj-e6e44-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "androidproj-e6e44",
+    "storage_bucket": "androidproj-e6e44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485347036669:android:444d742b44c8e5af80dd94",
+        "android_client_info": {
+          "package_name": "me.anton.z_bank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPpSHjIKmtjKXHZ8XEjkYIB-6MGZMqs3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
