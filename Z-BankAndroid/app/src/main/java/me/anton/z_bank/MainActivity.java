@@ -38,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
         registerBtn = findViewById(R.id.registerBtn);
 
         loginBtn.setOnClickListener(view -> {
-            db.child("Users").orderByChild("userName").equalTo(userField.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
+            db.child("Users").child(userField.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
                         // Username exists, handle duplication
+                        System.out.println(dataSnapshot.child("password").getValue());
+                        System.out.println(dataSnapshot.child("userName").getValue());
                         if(!dataSnapshot.getValue(User.class).getPassword().equals(passField.getText().toString())){
                             Toast.makeText(MainActivity.this, "Wrong Password", Toast.LENGTH_LONG).show();
                             return;
@@ -79,17 +81,18 @@ public class MainActivity extends AppCompatActivity {
 
             EditText registerUser = registerDialog.findViewById(R.id.registerUser);
             EditText registerPass = registerDialog.findViewById(R.id.registerPass);
-            EditText registerBtn2 = registerDialog.findViewById(R.id.registerBtn2);
+            Button registerBtn2 = registerDialog.findViewById(R.id.registerBtn2);
 
             registerBtn2.setOnClickListener(v -> {
                 String userName = registerUser.getText().toString();
                 String pass = registerPass.getText().toString();
 
                 if(userName.isEmpty() || !(userName.length() < 3)
-                        || pass.isEmpty() || !pass.matches("^(?=.*[A-Z])(?=.*\\\\d)(?=.*[!@#$%^&*()-_=+\\\\\\\\|[{]};:'\\\",<.>/?]).+$")){
+                        || pass.isEmpty() || !pass.matches("\n" +
+                        "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$\n")){
                     Toast.makeText(registerDialog.getContext(), "Your username should be longer or the password is missing a capital or special char", Toast.LENGTH_LONG).show();
                     registerDialog.dismiss();
-                    return;
+//                    return;
                 }
 
                 db.child("Users").orderByChild("userName").equalTo(userName).addListenerForSingleValueEvent(new ValueEventListener() {

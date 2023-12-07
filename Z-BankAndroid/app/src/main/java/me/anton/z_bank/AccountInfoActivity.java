@@ -35,11 +35,19 @@ public class AccountInfoActivity extends AppCompatActivity {
         settingsBtn = findViewById(R.id.settingsBtn);
 
         User curr = MainActivity.currentUser;
-        Transaction lastTransaction = curr.getTransactions().get(curr.getTransactions().size()-1);
+        Transaction lastTransaction = null;
+        try {
+            lastTransaction = curr.getTransactions().get(curr.getTransactions().size() - 1);
+        }catch(ArrayIndexOutOfBoundsException e){}
+
         nameDisplay.setText(curr.getUserName().replace(" ", "\n"));
         weatherDisplay.setText(APIAccessLayer.getCurrentWeather());
         balanceDisplay.setText(curr.getBalance() + "$");
-        lastTransactionDisplay.setText("Last Transaction" + "\n" + lastTransaction.getAmount() + " " + (lastTransaction.getFrom() == curr ? "to "+lastTransaction.getTo() : "from "+lastTransaction.getFrom()));
+        if(lastTransaction == null){
+            lastTransactionDisplay.setText("Waiting On Your First Transaction");
+        }else {
+            lastTransactionDisplay.setText("Last Transaction" + "\n" + lastTransaction.getAmount() + " " + (lastTransaction.getFrom() == curr ? "to "+lastTransaction.getTo() : "from "+lastTransaction.getFrom()));
+        }
         savingsDisplay.setText("Savings: \n" +curr.getSavingsBalance());
 
         transactionBtn.setOnClickListener(view -> {

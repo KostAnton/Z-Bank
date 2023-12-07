@@ -12,16 +12,14 @@ public class User {
     private String password;
     private double balance;
     private double savingsBalance;
-    private ArrayList<String> friendsUserNames;
-    private ArrayList<Transaction> transactions;
+    private ArrayList<String> friendsUserNames = new ArrayList<>();
+    private ArrayList<Transaction> transactions = new ArrayList<>();
 
     public User(String userName, String password, double balance, double savingsBalance){
         this.userName = userName;
         this.password = password;
         this.balance = balance;
         this.savingsBalance = savingsBalance;
-        this.friendsUserNames = new ArrayList<>();
-        this.transactions = new ArrayList<>();
         this.id = UUID.randomUUID().toString();
     }
 
