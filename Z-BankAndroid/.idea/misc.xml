@@ -4,11 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/drawable/grad_theme_bg.xml" value="0.417" />
-        <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/activity_account_info.xml" value="0.5145833333333333" />
+        <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/activity_account_info.xml" value="0.12745098039215685" />
         <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/activity_friends.xml" value="0.5145833333333333" />
         <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/activity_main.xml" value="0.5145833333333333" />
         <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/activity_settings.xml" value="0.5145833333333333" />
-        <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/activity_transaction_screen.xml" value="0.5145833333333333" />
+        <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/activity_transaction_screen.xml" value="0.25" />
         <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/register_dialog.xml" value="0.4962962962962963" />
         <entry key="..\:/Users/Anton/Desktop/Work/Android Project/Z-Bank/Z-BankAndroid/app/src/main/res/layout/transaction_dialog.xml" value="0.5182291666666666" />
       </map>
