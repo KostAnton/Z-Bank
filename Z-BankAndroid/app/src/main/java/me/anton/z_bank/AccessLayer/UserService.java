@@ -11,7 +11,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import me.anton.z_bank.DAO.Transaction;
 import me.anton.z_bank.DAO.User;
+import me.anton.z_bank.MainActivity;
 import me.anton.z_bank.callbacks.UserCallback;
 
 /**
@@ -27,15 +29,19 @@ public class UserService extends FirebaseRepository {
      * @param pass The password of the user to be registered.
      */
     public static void registerNewUser(String name, String pass) {
+        System.out.println("Added");
         firebaseDatabase.child("Users").child(name).setValue(new User(name, pass, 0, 0));
     }
 
-    public static void addFriend(String name){
+    public static void addFriend(String name, String friendName){
         DatabaseReference friends = firebaseDatabase.child("Users").child(name).child("friends");
-        DatabaseReference newLoc = friends.push();
-        newLoc.setValue(name);
+        friends.child(friendName).setValue(true);
     }
 
+    public static void makeTransaction(Transaction t){
+        t.transact();
+        firebaseDatabase.child("Users").child(t.getFrom().getUserName()).setValue(t.getFrom());
+    }
     /**
      * Retrieves user data from the Firebase database based on the user's name.
      *
@@ -51,6 +57,7 @@ public class UserService extends FirebaseRepository {
                     if(user.getUserName().equals(name))
                         callback.onUserFound(user);
                 }
+//                callback.onUserNotFound();
             }
 
             @Override

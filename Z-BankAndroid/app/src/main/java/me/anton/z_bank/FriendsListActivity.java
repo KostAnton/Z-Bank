@@ -44,7 +44,7 @@ public class FriendsListActivity extends AppCompatActivity {
         savingsTop.setText(MainActivity.currentUser.getSavingsBalance()+ "$");
 
         friendsList.setOnItemClickListener((adapterView, view, i, l) -> {
-            showDialog(MainActivity.currentUser.getFriendsUserNames().get(i));
+            showDialog(MainActivity.currentUser.getFriendsUserNames().get(i).trim());
         });
 
         addFriendBtn.setOnClickListener(view -> {
@@ -60,6 +60,7 @@ public class FriendsListActivity extends AppCompatActivity {
                     public void onUserFound(User user) {
                         MainActivity.currentUser.getFriendsUserNames().add(user.getUserName());
                         Toast.makeText(FriendsListActivity.this, "Friend added", Toast.LENGTH_SHORT).show();
+                        UserService.addFriend(MainActivity.currentUser.getUserName(),user.getUserName());
                         refreshList();
                         d.dismiss();
                     }
@@ -95,10 +96,11 @@ public class FriendsListActivity extends AppCompatActivity {
 
         sendBtn.setOnClickListener(view -> {
             if(amountEt.getText().toString().isEmpty()){
-                return;
+                dialog.dismiss();
             }
 
             User[] userFound = new User[1];
+            System.out.println(userName);
             UserService.getUserData(userName, new UserCallback() {
                 @Override
                 public void onUserFound(User user) {
@@ -106,7 +108,9 @@ public class FriendsListActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onUserNotFound() {} //Garanteed to be found
+                public void onUserNotFound() {
+                    System.out.println("NOT FOUND");
+                } //Garanteed to be found
 
                 @Override
                 public void onFailure(DatabaseError error) {} //Handaled in BRC

@@ -155,12 +155,12 @@ public class MainActivity extends AppCompatActivity {
                 String userName = registerUser.getText().toString();
                 String pass = registerPass.getText().toString();
 
-                if(userName.isEmpty() || !(userName.length() < 3)
-                        || pass.isEmpty() || !pass.matches("\n" +
-                        "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$\n")){
-                    Toast.makeText(registerDialog.getContext(), "Your username should be longer or the password is missing a capital or special char", Toast.LENGTH_LONG).show();
-                    registerDialog.dismiss();
-                }
+//                if(userName.isEmpty() || !(userName.length() < 3)
+//                        || pass.isEmpty() || !pass.matches("\n" +
+//                        "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$\n")){
+//                    Toast.makeText(registerDialog.getContext(), "Your username should be longer or the password is missing a capital or special char", Toast.LENGTH_LONG).show();
+//                    registerDialog.dismiss();
+//                }
 
                 db.child("Users").orderByChild("userName").equalTo(userName).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -170,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(registerDialog.getContext(), "Username already exists", Toast.LENGTH_LONG).show();
                         }else {
                             // Username does not exist! Register
-                            User newUser = new User(userName,pass,0,0);
-                            db.child("Users").child(userName).setValue(newUser);
+
+                            UserService.registerNewUser(userName, pass);
                             Toast.makeText(registerDialog.getContext(), "Registered Successfully!", Toast.LENGTH_SHORT).show();
                             registerDialog.dismiss();
                         }

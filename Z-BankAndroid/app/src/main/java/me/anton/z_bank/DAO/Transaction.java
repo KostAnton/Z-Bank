@@ -49,7 +49,9 @@ public class Transaction {
     public void transact() {
         TransactionService.makeTransaction(this);
         this.from.getTransactions().add(this);
+        this.from.setBalance(this.from.getBalance() - this.amount);
         this.to.getTransactions().add(this);
+        this.to.setBalance(this.to.getBalance() + this.amount);
     }
 
     /**
