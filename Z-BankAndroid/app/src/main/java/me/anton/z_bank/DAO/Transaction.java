@@ -4,7 +4,8 @@ import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.UUID;
 
-import me.anton.z_bank.AccessLayer.APIAccessLayer;
+import me.anton.z_bank.AccessLayer.FirebaseRepository;
+import me.anton.z_bank.AccessLayer.TransactionService;
 
 @IgnoreExtraProperties
 public class Transaction {
@@ -46,7 +47,7 @@ public class Transaction {
      * Calls an API layer to execute the transaction and updates the transaction lists for both sender and receiver.
      */
     public void transact() {
-        APIAccessLayer.makeTransaction(this);
+        TransactionService.makeTransaction(this);
         this.from.getTransactions().add(this);
         this.to.getTransactions().add(this);
     }

@@ -28,9 +28,6 @@
         android:id="@+id/sendBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16.8dp"
-        android:backgroundTint="#344754"
-        android:fontFamily="@font/ibm_plex_mono"
-        android:text="send"
-        android:textColor="#999696" />
+        android:text="Button" />
+
 </LinearLayout>

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import me.anton.z_bank.AccessLayer.APIAccessLayer;
 import me.anton.z_bank.DAO.Transaction;
 import me.anton.z_bank.DAO.User;
 
@@ -27,21 +26,24 @@ public class AccountInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account_info);
 
         nameDisplay = findViewById(R.id.nameDisplay);
-        weatherDisplay = findViewById(R.id.weatherDisplay);
         balanceDisplay = findViewById(R.id.balanceDisplay);
         lastTransactionDisplay = findViewById(R.id.lastTransactionDisplay);
         savingsDisplay = findViewById(R.id.savingsDisplay);
-        transactionBtn = findViewById(R.id.transactionBtn);
+        transactionBtn = findViewById(R.id.addFriendBtn);
         settingsBtn = findViewById(R.id.settingsBtn);
 
+        if(MainActivity.currentUser == null){
+            return;
+        }
         User curr = MainActivity.currentUser;
-        Transaction lastTransaction = null;
+        Transaction lastTransaction;
         try {
             lastTransaction = curr.getTransactions().get(curr.getTransactions().size() - 1);
-        }catch(ArrayIndexOutOfBoundsException e){}
+        }catch(IndexOutOfBoundsException | NullPointerException e){
+            lastTransaction = null;
+        }
 
         nameDisplay.setText(curr.getUserName().replace(" ", "\n"));
-        weatherDisplay.setText(APIAccessLayer.getCurrentWeather());
         balanceDisplay.setText(curr.getBalance() + "$");
         if(lastTransaction == null){
             lastTransactionDisplay.setText("Waiting On Your First Transaction");

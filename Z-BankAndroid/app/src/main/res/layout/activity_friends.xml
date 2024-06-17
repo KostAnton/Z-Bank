@@ -39,7 +39,7 @@
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/balanceTop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -50,7 +50,7 @@
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/savingsTop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -60,16 +60,6 @@
                 android:textColor="#80344754"
                 android:textSize="10sp" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/ibm_plex_mono"
-                android:gravity="center"
-                android:text="Making progress (Level 5)"
-                android:textColor="#40344754"
-                android:textSize="10sp" />
         </LinearLayout>
 
         <ImageView
@@ -83,5 +73,15 @@
     <ListView
         android:id="@+id/friendsList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/addFriendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.8dp"
+        android:backgroundTint="#344754"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:text="ADD A FRIEND"
+        android:textColor="#999696" />
 </LinearLayout>

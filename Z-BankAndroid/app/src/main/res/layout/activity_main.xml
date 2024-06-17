@@ -11,7 +11,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:scaleX="1"
@@ -20,10 +20,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/userField"
@@ -31,8 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:singleLine="false" />
+            android:fontFamily="@font/ibm_plex_mono"
+            android:inputType="text" />
 
         <EditText
             android:id="@+id/passField"
@@ -40,10 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Name"
-            android:inputType="textPassword"
-            android:singleLine="false"
-            tools:text="d" />
+            android:fontFamily="@font/ibm_plex_mono"
+            android:inputType="textPassword" />
     </LinearLayout>
 
     <Button
@@ -67,5 +63,16 @@
         android:text="register"
         android:textColor="#999696"
         android:textSize="6sp" />
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="100px"
+        android:fontFamily="@font/ibm_plex_mono"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textSize="50sp" />
 
 </LinearLayout>

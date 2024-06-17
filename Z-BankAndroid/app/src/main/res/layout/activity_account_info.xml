@@ -54,15 +54,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/weatherDisplay"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ibm_plex_mono"
-            android:gravity="center"
-            android:text="Sunny With Some Clouds &#9729;" />
-
-        <TextView
             android:id="@+id/balanceDisplay"
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -93,7 +84,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/transactionBtn"
+        android:id="@+id/addFriendBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16.8dp"

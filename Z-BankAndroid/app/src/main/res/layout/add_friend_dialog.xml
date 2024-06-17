@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:background="@drawable/grad_theme_bg"
     android:gravity="center"
     android:orientation="vertical">
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/ibm_plex_mono"
         android:gravity="center"
-        android:text="Register"
+        android:text="Add Friend"
         android:textSize="34sp" />
 
     <EditText
@@ -24,25 +25,16 @@
         android:inputType="textPersonName"
         android:textSize="12sp" />
 
-    <EditText
-        android:id="@+id/registerPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textSize="12sp" />
-
     <Button
         android:id="@+id/addFriend"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:alpha="0.7"
         android:backgroundTint="#344754"
         android:fontFamily="@font/ibm_plex_mono"
         android:letterSpacing="1.75"
-        android:text="register"
+        android:text="add"
         android:textColor="#999696"
         android:textSize="6sp" />
+
 </LinearLayout>
